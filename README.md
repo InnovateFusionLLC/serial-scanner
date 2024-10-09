@@ -1,46 +1,61 @@
-# usb-scanner
-Quick and easy USB / TTY scanner tool.
-
-# TTY Scanner!
+# Serial Killer: Terminal Tracker
 
 ## What is This?
 
-Ever wondered which Modbus device is hiding on your `/dev/ttyUSBx` ports? Fear not! The **TTY Scanner!** is here to track them down faster than a hacker tracks down Wi-Fi signals at a coffee shop.
+Ever wondered which Modbus device is lurking on your `/dev/ttyUSBx` ports? Or which mysterious serial devices are hiding out on your system? Look no further! **Serial Killer: Terminal Tracker** is here to help. With a name as fierce as the tool itself, it slices through the confusion and helps you pinpoint exactly which device is where, faster than a hacker tracks down Wi-Fi at a coffee shop.
 
-This modest (but mighty) tool will comb through all the **TTYUSB** ports you throw at it and hunt for those elusive Modbus devices, one address at a time, one port at a time. It’s like Sherlock Holmes for your serial devices... except without the funny hat.
+This tool is your Sherlock Holmes for serial ports, minus the fancy hat and pipe (unless you're into that).
 
 ## Features
 
-- **ASCII Art Banner**: Greets you with an epic "TTY SCANNER!" banner made from the finest ASCII characters known to humans. It scrolls to let you know this is serious business (but not *too* serious).
-- **Port Detective**: Enter your desired **TTYUSB** port range, and this tool will sniff them out, scanning each port in round-robin fashion across Modbus addresses like it’s nobody's business.
-- **Error Messages That Won’t Judge You**: If a Modbus device doesn’t respond, this tool will gently let you know. Maybe they’re just not in the mood. Or, you know... unplugged.
-- **Humans, Not Robots**: Scans through **TTYUSB** ports, because there’s no fun in manually checking each one. We’ve automated the tedium so you can focus on more important things, like making coffee.
+- **ASCII Art Banner**: You’re greeted with an epic ASCII art banner proclaiming "Serial Killer: Terminal Tracker" in all its glory, complete with a knife! Because, well... it's serious business (but not too serious).
+- **Round-Robin Modbus Scanner**: Enter your desired **TTYUSB** port range and watch it hunt for devices across all ports in round-robin fashion. It's like speed dating, but for serial ports.
+- **Serial Monitor Mode**: Not just scanning! You can choose to monitor serial data from a specific port, making it versatile for many use cases.
+- **Helpful Error Messages**: If a Modbus device doesn’t respond, don’t worry, the tool will let you know—gently. No judgment here.
+- **Interactive Menu**: Choose between scanning for Modbus devices or simply monitoring your serial data, all from a simple menu.
 
 ## Installation
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/YOUR_REPO/tty-scanner.git
-   cd tty-scanner
-   ```
+   git clone https://github.com/YOUR_REPO/serial-killer-terminal-tracker.git
+   cd serial-killer-terminal-tracker
 
 2. Install dependencies:
    ```bash
    pip3 install minimalmodbus pyserial
+   # or
+   pipx install minimalmodbus pyserial
+
    ```
 
 3. Run the scanner:
    ```bash
-   python3 modbus_scanner.py
+   python3 serial_killer.py
    ```
 
-4. Enter your **TTYUSB** port range, sit back, and let **TTY Scanner!** do the rest!
+4. How It Works
+You'll be greeted with an awesome banner and a menu:
+- Choose to scan for Modbus devices.
+- Or, monitor a specific serial port.
 
-## How It Works
+Enter the port range for scanning or select the port to monitor and let the tool do the rest.
 
-1. **Banner Flash**: You’ll be greeted by a spectacular **TTY SCANNER!** ASCII banner that scrolls down your terminal in true hacker movie fashion.
-2. **Modbus Madness**: After you wipe the awe-struck look off your face, you’ll input the range of **TTYUSB** ports to scan. Watch in amazement as this script hunts down Modbus devices like a bloodhound.
-3. **The Results**: For every Modbus device it finds, you’ll get a detailed report on which address it responded to, and from which port it was found. You can’t hide, Modbus!
+Sit back and watch the magic unfold as it scans through the ports or monitors serial data!
+
+### Example
+
+After running the script and entering your port range or port to monitor, you'
+   ```bash
+TTTT EEEEE RRRR M M III N N AAAAA L TTTT RRRR AAAAA CCCCC K K EEEEE RRRR ! Serial Killer: Terminal Tracker is here!
+Knife (ASCII art) here...
+
+Welcome to Serial Killer: Terminal Tracker!
+
+Scan for Modbus devices
+Monitor serial data from a specific port
+   ```
+Choose your option and start hunting down those devices like a pro!
 
 ## Who’s This For?
 
